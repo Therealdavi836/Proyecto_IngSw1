@@ -9,7 +9,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Cyborg - Awesome HTML5 Template</title>
+    <title>Retro Hub Site</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -51,8 +51,12 @@ https://templatemo.com/tm-579-cyborg-gaming
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="{% static 'assets/images/logo.png' %}" alt="">
+                    <a href="{% url 'home' %}" class="logo d-flex align-items-end justify-content-center"
+                      style="gap: 6px; transform: scale(0.95); transform-origin: right; margin-top: -10px;">
+                      <img src="{% static 'assets/images/Logo_Symbol.png' %}" alt="RetroHub Logo"
+                          style="height: 90px; width: auto; border-radius: 8px;">
+                      <img src="{% static 'assets/images/Logo_Text.png' %}" alt="RetroHub Logo Text"
+                          style="height: 90px; width: auto; border-radius: 8px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Search End ***** -->
@@ -65,12 +69,13 @@ https://templatemo.com/tm-579-cyborg-gaming
                     <!-- ***** Search End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="browse.html">Browse</a></li>
-                        <li><a href="details.html">Details</a></li>
-                        <li><a href="streams.html">Streams</a></li>
-                        <li><a href="profile.html" class="active">Profile <img src="{% static 'assets/images/profile-header.jpg' %}" alt=""></a></li>
-                    </ul>   
+                        <li><a href="{% url 'home' %}">Hogar</a></li>
+                        <li><a href="{% url 'browse' %}">Buscar</a></li>
+                        <li><a href="{% url 'details' %}">Detalles</a></li>
+                        <li><a href="{% url 'streams' %}">Transmisiones</a></li>
+                        <li><a href="{% url 'about' %}">Sobre Nosotros</a></li>
+                        <li><a href="{% url 'profile' %}" class="active">Perfil <img src="{% static 'assets/images/profile-header.jpg' %}" alt=""></a></li>
+                    </ul>      
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>

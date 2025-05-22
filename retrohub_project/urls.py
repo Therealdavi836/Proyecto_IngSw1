@@ -17,15 +17,32 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.shortcuts import render
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
 
 # Vista directa usando render
 def home(request):
-    return render(request, 'index.html')  # Ajustar el nombre de tu plantilla
+    return render(request, 'index.html')  # Ajustar el nombre de la plantilla
+
+def browse(request):
+    return render(request, 'browse.html')
+
+def details(request):
+    return render(request, 'details.html')
+
+def profile(request):
+    return render(request, 'profile.html')
+
+def streams(request):
+    return render(request, 'streams.html')
+
+def about(request):
+    return render(request, 'about.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),  # Esta línea hace que se cargue en la raíz /
+    path('browse/', browse, name='browse'),
+    path('details/', details, name='details'),
+    path('profile/', profile, name='profile'),
+    path('streams/', streams, name='streams'),
+    path('about/', about, name='about'),
 ]

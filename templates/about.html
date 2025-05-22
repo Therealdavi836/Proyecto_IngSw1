@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Retro Hub Site</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-cyborg-gaming.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{% url 'home' %}" class="logo d-flex align-items-end justify-content-center"
+                      style="gap: 6px; transform: scale(0.95); transform-origin: right; margin-top: -10px;">
+                      <img src="{% static 'assets/images/Logo_Symbol.png' %}" alt="RetroHub Logo"
+                          style="height: 90px; width: auto; border-radius: 8px;">
+                      <img src="{% static 'assets/images/Logo_Text.png' %}" alt="RetroHub Logo Text"
+                          style="height: 90px; width: auto; border-radius: 8px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Search End ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Busca tu proximo videojuego" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="{% url 'home' %}">Hogar</a></li>
+                        <li><a href="{% url 'browse' %}">Buscar</a></li>
+                        <li><a href="{% url 'details' %}">Detalles</a></li>
+                        <li><a href="{% url 'streams' %}">Transmisiones</a></li>
+                        <li><a href="{% url 'about' %}" class="active">Sobre Nosotros</a></li>
+                        <li><a href="{% url 'profile' %}">Perfil <img src="{% static 'assets/images/profile-header.jpg' %}" alt=""></a></li>
+                    </ul>  
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+          <!-- ***** Banner Start ***** --> 
+            <div class="main-banner" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{% static 'assets/images/Banner_About.jpg' %}'); background-size: cover; background-position: center; min-height: 500px; display: flex; align-items: center;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="header-text text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                <h6>Sobre nosotros</h6>
+                                <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 700;">
+                                    <em style="color: #ec6090; font-style: normal;">Conoce</em> nuestra historia
+                                </h2>
+                                <p class="lead mb-4" style="font-size: 1.2rem; color: aliceblue;">
+                                    Descubre quiénes somos y nuestra pasión por los juegos retro
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Banner End ***** -->
+
+          <!-- ***** About Us Start ***** -->
+            <div class="about-section" style="padding: 80px 0;">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading-section text-center mb-5">
+                    <h4><em>Nuestra</em> Historia</h4>
+                    </div>
+                </div>
+                </div>
+
+                <div class="row align-items-center">
+                <!-- Imagen del equipo -->
+                <div class="col-lg-6">
+                    <div class="about-image" style="border-radius: 23px; overflow: hidden;">
+                    <img src="{% static 'assets/images/Logo_RetroHub.jpg' %}" alt="Equipo Retro Hub"
+                        style="width: 100%; height: auto; border-radius: 23px;">
+                    </div>
+                </div>
+
+                <!-- Texto sobre nosotros -->
+                <div class="col-lg-6">
+                    <div class="about-content" style="color: #fff;">
+                    <h3 style="color: #ec6090; margin-bottom: 20px;">¿Quiénes Somos?</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.6;">
+                        Retro Hub nació de la pasión compartida por los videojuegos clásicos que marcaron nuestra infancia.
+                        Somos un equipo de desarrolladores, diseñadores y gamers apasionados que buscamos preservar
+                        la magia de los juegos retro para las futuras generaciones.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="feature-item d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center"
+                            style="background-color: #ec6090; width: 40px; height: 40px; border-radius: 50%; margin-right: 15px;">
+                            <i class="fa fa-gamepad text-white"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Más de 1000 juegos clásicos</h5>
+                            <p class="mb-0" style="opacity: 0.8;">Desde Atari hasta PlayStation 2</p>
+                        </div>
+                        </div>
+
+                        <div class="feature-item d-flex align-items-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center"
+                            style="background-color: #ec6090; width: 40px; height: 40px; border-radius: 50%; margin-right: 15px;">
+                            <i class="fa fa-users text-white"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Comunidad activa</h5>
+                            <p class="mb-0" style="opacity: 0.8;">Más de 50,000 miembros registrados</p>
+                        </div>
+                        </div>
+
+                        <div class="feature-item d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center"
+                            style="background-color: #ec6090; width: 40px; height: 40px; border-radius: 50%; margin-right: 15px;">
+                            <i class="fa fa-heart text-white"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Preservación digital</h5>
+                            <p class="mb-0" style="opacity: 0.8;">Rescatamos juegos olvidados</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Equipo -->
+                <div class="row mt-5 justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="heading-section text-center mb-5">
+                            <h4><em>Nuestro</em> Equipo</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="team-member text-center p-4" style="background-color: #1f2122; border-radius: 23px;">
+                            <img src="{% static 'assets/images/team-01.jpg' %}" alt="Carlos Méndez"
+                                style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                            <h5 style="color: #ec6090;">Juan David Fajardo Betancourt</h5>
+                            <p style="color: #fff; opacity: 0.8;">Fundador & CEO</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="team-member text-center p-4" style="background-color: #1f2122; border-radius: 23px;">
+                            <img src="{% static 'assets/images/team-02.jpg' %}" alt="Ana Rodríguez"
+                                style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                            <h5 style="color: #ec6090;">Santiago Mazo Orozco</h5>
+                            <p style="color: #fff; opacity: 0.8;">Desarrollador Principal</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="team-member text-center p-4" style="background-color: #1f2122; border-radius: 23px;">
+                            <img src="{% static 'assets/images/team-03.jpg' %}" alt="Luis Fernández"
+                                style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
+                            <h5 style="color: #ec6090;">Esteban Lopez Usma</h5>
+                            <p style="color: #fff; opacity: 0.8;">Diseñador UX/UI</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            <!-- ***** About Us End ***** -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
+          
+          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+  <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/tabs.js' %}"></script>
+  <script src="{% static 'assets/js/popup.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+
+
+  </body>
+
+</html>
