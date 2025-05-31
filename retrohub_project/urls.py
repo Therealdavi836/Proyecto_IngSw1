@@ -37,6 +37,9 @@ def streams(request):
 def about(request):
     return render(request, 'about.html')
 
+def login(request):
+    return render(request, 'login.html')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),  # Esta línea hace que se cargue en la raíz /
@@ -45,4 +48,5 @@ urlpatterns = [
     path('profile/', profile, name='profile'),
     path('streams/', streams, name='streams'),
     path('about/', about, name='about'),
+    path('login/', login, name='login'),
 ]

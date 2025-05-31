@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Retro Hub Site</title>
+
+     <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="{% static 'assets/images/favicon.ico' %}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-cyborg-gaming.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="{% url 'home' %}" class="logo d-flex align-items-end justify-content-center"
+                      style="gap: 6px; transform: scale(0.95); transform-origin: right; margin-top: -10px;">
+                      <img src="{% static 'assets/images/Logo_Symbol.png' %}" alt="RetroHub Logo"
+                          style="height: 90px; width: auto; border-radius: 8px;">
+                      <img src="{% static 'assets/images/Logo_Text.png' %}" alt="RetroHub Logo Text"
+                          style="height: 90px; width: auto; border-radius: 8px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Search End ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Busca tu proximo videojuego" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="{% url 'home' %}" class="active">Hogar</a></li>
+                        <li><a href="{% url 'browse' %}">Buscar</a></li>
+                        <li><a href="{% url 'details' %}">Detalles</a></li>
+                        <li><a href="{% url 'streams' %}">Transmisiones</a></li>
+                        <li><a href="{% url 'about' %}">Sobre Nosotros</a></li>
+                        <li><a href="{% url 'login' %}">Perfil <img src="{% static 'assets/images/profile-header.jpg' %}" alt=""></a></li>
+                    </ul>  
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+          <!-- ***** Banner Start ***** --> 
+            <div class="main-banner" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{% static 'assets/images/bannerLogin.jpg' %}'); background-size: cover; background-position: center; min-height: 500px; display: flex; align-items: center;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 text-center">
+                            <div class="header-text text-white" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                <h6>Descubre un mundo infinito de aventuras</h6>
+                                <h2 class="mb-4" style="font-size: 2.5rem; font-weight: 700;">
+                                    <em style="color: #ec6090; font-style: normal;">Registrate</em> y descubre un universo de juegos de antaño
+                                </h2>
+                                <p class="lead mb-4" style="font-size: 1.2rem; color: aliceblue;">
+                                    Crea tu cuenta y sumérgete en la nostalgia de los videojuegos retro. Disfruta de una experiencia única con nuestra amplia colección de juegos clásicos, desde consolas icónicas hasta títulos que definieron una era. ¡Únete a nuestra comunidad y revive los mejores momentos del pasado!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ***** Banner End ***** -->
+
+          <!-- ***** Login Section Start ***** -->
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <div class="login-form" style="background-color: #1f2122; padding: 30px; border-radius: 23px; margin-top: 60px; margin-bottom: 60px;">
+                <div class="heading-section text-center mb-5">
+                  <h4><em>Iniciar</em> Sesión</h4>
+                  <p>Ingresa tus credenciales para acceder a tu cuenta</p>
+                </div>
+                <form method="post" action="#">
+                  <div class="mb-4">
+                    <label for="username" class="form-label" style="color: #ec6090; margin-bottom: 8px; display: block;">Nombre de usuario</label>
+                    <input type="text" class="form-control" id="username" placeholder="Tu nombre de usuario" style="background-color: #27292a; border: 1px solid #323435; color: white; height: 50px; border-radius: 23px; padding: 0 20px;">
+                  </div>
+                  <div class="mb-4">
+                    <label for="password" class="form-label" style="color: #ec6090; margin-bottom: 8px; display: block;">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Tu contraseña" style="background-color: #27292a; border: 1px solid #323435; color: white; height: 50px; border-radius: 23px; padding: 0 20px;">
+                  </div>
+                  <div class="mb-4 form-check">
+                    <input type="checkbox" class="form-check-input" id="remember" style="background-color: #27292a; border: 1px solid #323435;">
+                    <label class="form-check-label" for="remember" style="color: #666; margin-left: 5px;">Recordarme</label>
+                  </div>
+                  <div class="mb-4 text-center">
+                    <button type="submit" class="main-button" style="width: 100%; border: none; height: 50px; border-radius: 23px; background-color: #ec6090; color: white; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Iniciar Sesión</button>
+                  </div>
+                  <div class="text-center">
+                    <a href="#" style="color: #ec6090; text-decoration: none; font-size: 14px;">¿Olvidaste tu contraseña?</a>
+                    <p style="color: #666; margin-top: 20px;">¿No tienes una cuenta? <a href="#" style="color: #ec6090; text-decoration: none;">Regístrate</a></p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Login Section End ***** -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2036 <a href="#">Cyborg Gaming</a> Company. All rights reserved. 
+          
+          <br>Design: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+  <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/tabs.js' %}"></script>
+  <script src="{% static 'assets/js/popup.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+
+
+  </body>
+
+</html>
