@@ -116,6 +116,38 @@ img {
   overflow: hidden;
 }
 
+:root {
+  /* Tema oscuro (valores por defecto) */
+  --bg-primary: #1f2122;
+  --bg-secondary: #27292a;
+  --bg-tertiary: #1e1e1e;
+  --text-primary: #fff;
+  --text-secondary: #666;
+  --accent-color: #e75e8d;
+  --accent-secondary: #ec6090;
+  --border-color: #353637;
+  --card-bg: #27292a;
+  --header-bg: #2c2929;
+  --search-bg: #27292a;
+  --button-text: #fff;
+}
+
+[data-theme="light"] {
+  /* Tema claro */
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e0e0e0;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --accent-color: #c2185b;
+  --accent-secondary: #d81b60;
+  --border-color: #e0e0e0;
+  --card-bg: #ffffff;
+  --header-bg: #ffffff;
+  --search-bg: #f5f5f5;
+  --button-text: #ffffff;
+}
+
 /* 
 ---------------------------------------------
 Global Styles
@@ -619,7 +651,7 @@ Header Style
 }
 
 .header-area.header-sticky .nav li a.active {
-  color: #fff;
+  color: #1d1b1b;
 }
 
 @media (max-width: 1200px) {
@@ -669,7 +701,7 @@ Header Style
     width: 100%;
   }
   .header-area {
-    background-color: #f7f7f7;
+    background-color: #2c2929;
     padding: 0px 15px;
     height: 80px;
     box-shadow: none;
@@ -705,12 +737,12 @@ Header Style
     margin-top: 70px !important;
   }
   .header-area .main-nav .nav li:first-child {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #2b2a2a;
   }
   .header-area .main-nav .nav li {
     width: 100%;
-    background: #fff;
-    border-bottom: 1px solid #eee;
+    background: #232121;
+    border-bottom: 1px solid #3a3737;
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
@@ -719,11 +751,11 @@ Header Style
     line-height: 50px !important;
     padding: 0px !important;
     border: none !important;
-    background: #fff !important;
+    background: #363434 !important;
     color: #1e1e1e !important;
   }
   .header-area .main-nav .nav li a:hover {
-    background: #fff !important;
+    background: #312f2f !important;
     color: #e75e8d!important;
   }
   .header-area .main-nav .nav li:last-child a img {
