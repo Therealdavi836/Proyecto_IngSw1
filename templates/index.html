@@ -23,13 +23,9 @@
     <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
+    <!-- TemplateMo 579 Cyborg Gaming -->
+    <!-- https://templatemo.com/tm-579-cyborg-gaming -->
 
-TemplateMo 579 Cyborg Gaming
-
-https://templatemo.com/tm-579-cyborg-gaming
-
--->
   </head>
 
 <body>
@@ -55,7 +51,7 @@ https://templatemo.com/tm-579-cyborg-gaming
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="{% url 'home' %}" class="logo d-flex align-items-end justify-content-center"
-                      style="gap: 6px; transform: scale(0.95); transform-origin: right; margin-top: -10px;">
+                      style="gap: 6px; transform: scale(0.95); transform-origin: right; margin-top: -20px;">
                       <img src="{% static 'assets/images/Logo_Symbol.png' %}" alt="RetroHub Logo"
                           style="height: 90px; width: auto; border-radius: 8px;">
                       <img src="{% static 'assets/images/Logo_Text.png' %}" alt="RetroHub Logo Text"
@@ -206,16 +202,16 @@ https://templatemo.com/tm-579-cyborg-gaming
                       </ul>
                     </div>
                   </div>
-                  <div class="col-lg-12">
-                    <div class="main-button">
-                      <a href="{% url 'browse' %}">Descubre más juegos populares</a>
-                    </div>
-                  </div>
+                </div>
+                <!-- Botón bien posicionado FUERA del row de tarjetas -->
+                <div class="main-button text-center mb-4">
+                  <a href="{% url 'browse' %}">Descubre más juegos populares</a>
                 </div>
               </div>
             </div>
           </div>
           <!-- ***** Most Popular End ***** -->
+
 
           <!-- ***** Gaming Library Start ***** -->
           {% if user.is_authenticated %}
@@ -267,10 +263,10 @@ https://templatemo.com/tm-579-cyborg-gaming
           {% else %}
             <div class="text-center py-5">
               <h4 style="color: white;">Debes iniciar sesión para ver tu biblioteca de juegos.</h4>
-              <div class="col-lg-12">
-                <div class="main-button">
-                  <a href="{% url 'browse' %}">Iniciar sesión</a>
-                </div>
+
+              <!-- Botón centrado -->
+              <div class="main-button mt-4">
+                <a href="{% url 'browse' %}">Iniciar sesión</a>
               </div>
             </div>
           {% endif %}
